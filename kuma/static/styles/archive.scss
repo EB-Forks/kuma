@@ -27,3 +27,13 @@ Red background & stripped border for archived pages
         padding: $gutter-width;
     }
 }
+
+.text-content article[id='wikiArticle'] {
+    /* fix spacing and line if h2 directly follows a hr, summary, or blockquote */
+    > hr,
+    > blockquote {
+        + h2 {
+            background-color: $red-light;
+        }
+    }
+}
